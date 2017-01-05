@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.cool {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.left, .right {
+  height: 100%;
+  width: 33%;
+}
+
+.red, .blue {
+  height: 200vh;
+  width: 100vh;
+  transition: all .2s ease-in-out;
+  mix-blend-mode: multiply;
+}
+
+.red {
+  background-color: #f41d07;
+  float: left;
+    border-radius: 50% 50%;
+    position: absolute;
+    transform: translateY(-142vh) translateX(-58vw) rotate(125deg);
+}
+.blue {
+  background-color: #1bd3e3;
+  float: right;
+    border-radius: 50% 50%;
+    position: absolute;
+    transform: translateY(42vh) translateX(33vw) rotate(129deg);
+}
+
+.mid {
+  position: relative;
+  width: 33%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.mid h1 {
+  font-size: 8vw;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  mix-blend-mode: multiply;
+  text-transform: uppercase;
+}
+
+.intro-1, .intro-2 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.intro-1 {
+  color: #f41d07;
+}
+.intro-2 {
+  color: #1bd3e3;
+}
+
+.red:hover {
+  transform: translateY(-142vh) translateX(-58%) rotate(125deg) scale(2.1);
+  animation: grow .7s;
+}
+.blue:hover {
+  transform: translateY(42vh) translateX(35%) rotate(126deg) scale(2.1);
+  animation: grow-again .7s;
+}
+
+@keyframes grow {
+  0% {
+    transform: translateY(-142vh) translateX(-58%) rotate(125deg) scale(1);
+  }
+  50% {
+    transform: translateY(-142vh) translateX(-58%) rotate(125deg) scale(2.2);
+  }
+  80% {
+    transform: translateY(-142vh) translateX(-58%) rotate(125deg) scale(2.08);
+  }
+  100% {
+    transform: translateY(-142vh) translateX(-58%) rotate(125deg) scale(2.1);
+  }
+}
+
+@keyframes grow-again {
+  0% {
+    transform: translateY(42vh) translateX(35%) rotate(126deg) scale(1);
+  }
+  50% {
+    transform: translateY(42vh) translateX(35%) rotate(126deg) scale(2.2);
+  }
+  80% {
+    transform: translateY(42vh) translateX(35%) rotate(126deg) scale(2.08);
+  }
+  100% {
+    transform: translateY(42vh) translateX(35%) rotate(126deg) scale(2.1);
+  }
+}
